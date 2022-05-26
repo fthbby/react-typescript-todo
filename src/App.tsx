@@ -17,13 +17,19 @@ const handleAdd = (e: React.FormEvent) => {
   }
 };
 
- console.log(todo)
+  // console.log(todo)
   console.log(todos)
   
   return (
     <div className='App'>
       <span className="heading">To Do App</span>
       <InputField todo={todo} setTodo = {setTodo} handleAdd = {handleAdd} />
+
+      {/* <TodoList/> */}
+
+    {todos.map((t)=>(
+      <li>{t.todo}</li>
+    ))}
 
     </div>
   );
